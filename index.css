@@ -24,17 +24,6 @@
   width: 210mm;
 }
 
-@media print {
-  input {
-    display: none;
-  }
-}
-
-@page {
-  margin: 0;
-  size: a4;
-}
-
 /* Html */
 
 html {
@@ -44,11 +33,35 @@ html {
 /* Body */
 
 body {
-  background-color: rgb(240, 240, 240);
+  background-color: rgb(30, 30, 30);
   color: rgb(30, 30, 30);
   font-family: "Noto Sans", sans-serif;
   line-height: 1.36;
   margin: 0;
+}
+
+/* Pagination */
+
+.pagination {
+  display: flex;
+  gap: 8px;
+}
+
+.pagination > a {
+  border-color: rgb(41, 109, 251);
+  border-radius: 8px;
+  border-style: solid;
+  border-width: 1px;
+  color: rgb(41, 109, 251);
+  display: block;
+  font-size: 12px;
+  padding: 10px 14px;
+  text-decoration: none;
+  transition-duration: 300ms;
+}
+
+.pagination > a:hover {
+  background-color: rgba(41, 109, 251, 0.1);
 }
 
 /* Header */
@@ -142,4 +155,28 @@ section > ul.icon > li > a {
 section > ul.icon > li > a > svg {
   height: 5mm;
   margin-right: 2.5mm;
+}
+
+@media print {
+  .pagination {
+    display: none;
+  }
+}
+
+@media screen {
+  #document {
+    border-radius: 8px;
+  }
+  body {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 96px 32px;
+  }
+}
+
+@page {
+  margin: 0;
+  size: a4;
 }
