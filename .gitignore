@@ -1,0 +1,10 @@
+# Global
+*
+!/.gitignore
+
+# Files
+!/index.css
+!/index.html
+!/index.js
+!/package.json
+!/yarn.lock
